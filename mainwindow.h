@@ -5,6 +5,7 @@
 #include <QLineEdit>
 #include <QHostAddress>
 #include <QNetworkInterface>
+#include <QNetworkAccessManager>
 #include <QTcpSocket>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -19,11 +20,17 @@
 #include <QTableView>
 #include <QFileDialog>
 #include <QStandardPaths>
-#include <QChart>
-#define DB_HOSTNAME "127.0.0.1"
-#define DB_USERNAME "test"
-#define DB_PASSWORD "test"
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QByteArray>
+#include <QComboBox>
+#define DB_HOSTNAME "192.168.1.1"
+#define DB_USERNAME "volunteer"
+#define DB_PASSWORD "amituofo"
 #define DB_NAME "vol"
+#define FTP_PATH "/home/sumeru/images"
+#define FTP_USER "sumeru"
+#define FTP_PASSWORD "7d1d4f8c0e"
 
 namespace Ui {
 class MainWindow;
@@ -41,7 +48,7 @@ public:
     QLineEdit *lineEditSearch;
 
     void initToolBarLineEdits();
-    void testIfLineEditEmpty();
+    bool testIfLineEditEmpty();
     bool testIfhasThisRecord(QString pid);
     bool initDatabase(QString hostname, QString username, QString password);
     bool connDatabase(QString hostname, QString username, QString password);
@@ -52,6 +59,9 @@ public:
     void clearAddEdits();
 
     void searchBy();
+    void addDepartItems();
+    void addEditDepartItemsLevelOne();
+    void addEditDepartItemsLevelTwo();
 
     QString gDocumentPath;
 
@@ -86,6 +96,14 @@ private slots:
     void on_actionDeleteVRow_triggered();
 
     void on_actionCVOutput_triggered();
+
+    void on_actionShowDetail_triggered();
+
+    void on_tableViewDepart_customContextMenuRequested(const QPoint &pos);
+
+    void on_comboBoxDepartLevel_currentIndexChanged(int index);
+
+    void on_comboBoxDepart_currentIndexChanged(int index);
 
 private:
     Ui::MainWindow *ui;

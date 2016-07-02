@@ -2,7 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QIcon>
 #include <QDebug>
-#include <QtCharts>
+#include <QNetworkReply>
+#include <QMenu>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -160,11 +161,10 @@ bool MainWindow::portTest(QString ip, int port)
     tsock.connectToHost(ip, port);
     bool ret = tsock.waitForConnected(1000);
     if (ret) tsock.close();
-    qDebug() << "func=portTest,ip=" << ip << ",port=" << port << ",stat=" << ret;
     return ret;
 }
 
-void MainWindow::testIfLineEditEmpty()
+bool MainWindow::testIfLineEditEmpty()
 {
     bool stat[14] = { ui->lineEditName->text().isEmpty(),
                       ui->comboBoxGender->currentText().startsWith(">"),
@@ -182,15 +182,15 @@ void MainWindow::testIfLineEditEmpty()
                       ui->comboBoxVolunteerType->currentText().startsWith(">")
                     };
 
-    qDebug() << "testIfLineEditEmpty";
-
     for(int i = 0; i < 14; i++) {
         qDebug() << stat[i];
         if (stat[i]) {
             QMessageBox::critical(this, "", "所有表格不允许为空，选择框请下拉选择。");
-            return;
+            return true;
         }
     }
+
+    return false;
 }
 
 bool MainWindow::testIfhasThisRecord(QString pid)
@@ -266,18 +266,23 @@ void MainWindow::on_actionConnect_triggered()
 {
     int ret = connDatabase(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);
     if (!ret) {
-        QMessageBox::critical(this, "", "CONNECT DATABASE ERROR");
+        QMessageBox::critical(this, "", "连接服务器错误，即将退出系统。");
+        qApp->closeAllWindows();
         return;
     }
     qDebug() << "func=on_actionConnect_triggered";
     ui->actionConnect->setDisabled(true);
     lineEditUserName->setDisabled(true);
     lineEditPassWord->setDisabled(true);
+
+    addEditDepartItemsLevelOne();
 }
 
 void MainWindow::on_actionSave_triggered()
 {
-    testIfLineEditEmpty();
+    bool st = testIfLineEditEmpty();
+    if (st) return;
+
     bool stat = testIfhasThisRecord(ui->lineEditPID->text().trimmed());
     if (stat) return;
     QSqlQuery query;
@@ -309,6 +314,7 @@ void MainWindow::on_actionSave_triggered()
                   " `race`,"
                   " `marriage`,"
                   " `depart`,"
+                  " `departsecond`,"
                   " `past`,"
                   " `whyhere`,"
                   " `hopefor`,"
@@ -343,6 +349,7 @@ void MainWindow::on_actionSave_triggered()
                   " :race, "
                   " :marriage, "
                   " :depart, "
+                  " :departsecond, "
                   " :past, "
                   " :whyhere, "
                   " :hopefor, "
@@ -378,6 +385,7 @@ void MainWindow::on_actionSave_triggered()
     query.bindValue(":race", ui->comboBoxRace->currentText().trimmed());
     query.bindValue(":marriage", ui->comboBoxMariage->currentText().trimmed());
     query.bindValue(":depart", ui->comboBoxDepart->currentText().trimmed());
+    query.bindValue(":departsecond", ui->comboBoxDepartSecond->currentText().trimmed());
     query.bindValue(":past", ui->plainTextEditPast->toPlainText());
     query.bindValue(":whyhere", ui->plainTextEditWhyHere->toPlainText());
     query.bindValue(":hopefor", ui->plainTextEditHopeFor->toPlainText());
@@ -406,12 +414,21 @@ void MainWindow::on_actionSearch_triggered()
 
 void MainWindow::on_toolButtonImage_clicked()
 {
-    // 选择需要上传的照片，先放到默认路径，然后上传到服务器，照片名称用身份证的 MD5 散列
-    qDebug() << "upload image";
     QString fileName = QFileDialog::getOpenFileName(this,
         tr("Open Image"), "~/", tr("Image Files (*.png)"));
-    qDebug() << fileName;
     ui->toolButtonImage->setIcon(QIcon(fileName));
+
+    QFile readFile(fileName);
+    readFile.open(QIODevice::ReadOnly);
+    QByteArray bytes = readFile.readAll();
+    readFile.close();
+
+    QNetworkAccessManager manager;
+    QUrl url("ftp://192.168.128.10/home/sumeru/images/volunteer/test.png");
+    url.setUserInfo("sumeru");
+    url.setPassword("7d1d4f8c0e");
+    qDebug() << url.url();
+    manager.put(QNetworkRequest(url), bytes);
 }
 
 void MainWindow::on_pushButtonDepartSave_clicked()
@@ -423,10 +440,12 @@ void MainWindow::on_pushButtonDepartSave_clicked()
     QString phone = ui->lineEditDepartPhone->text().trimmed();
     QString tel = ui->lineEditDepartTel->text().trimmed();
     QString stat = ui->lineEditDepartStat->text().trimmed();
+    QString level = ui->comboBoxDepartLevel->currentText().trimmed();
+    QString topper = ui->comboBoxDepartUpStairs->currentText().trimmed();
 
     QSqlQuery query;
-    query.prepare("insert into `depart` (`name`, `startupdate`, `master`, `incharge`, `phone`, `tel`, `stat`) "
-                  " values (:name, :startupdate, :master, :incharge, :phone, :tel, :stat)");
+    query.prepare("insert into `depart` (`name`, `startupdate`, `master`, `incharge`, `phone`, `tel`, `stat`, `level`, `topper`) "
+                  " values (:name, :startupdate, :master, :incharge, :phone, :tel, :stat, :level, :topper)");
 
     query.bindValue(":name", name);
     query.bindValue(":startupdate", startupdate);
@@ -435,11 +454,15 @@ void MainWindow::on_pushButtonDepartSave_clicked()
     query.bindValue(":phone", phone);
     query.bindValue(":tel", tel);
     query.bindValue(":stat", stat);
+    query.bindValue(":level", level);
+    query.bindValue(":topper", topper);
     query.exec();
 
     qDebug() << query.lastError().text() << query.lastQuery();
     departModel->select();
     ui->tableViewDepart->reset();
+
+    addEditDepartItemsLevelOne();
 }
 
 void MainWindow::on_tabWidget_currentChanged(int index)
@@ -505,6 +528,8 @@ void MainWindow::on_tableView_customContextMenuRequested(const QPoint &pos)
     popMenu->addAction(ui->actionDeleteVRow);
     popMenu->addAction(ui->actionCVOutput);
     popMenu->addAction(ui->actionShowDetail);
+    popMenu->addAction(ui->actionRecordHistory);
+    popMenu->addAction(ui->actionTransferHistory);
     popMenu->exec(QCursor::pos());
 
     delete popMenu;
@@ -534,4 +559,105 @@ void MainWindow::on_actionDeleteVRow_triggered()
 void MainWindow::on_actionCVOutput_triggered()
 {
     if (gRowNum < 0) return;
+}
+
+void MainWindow::on_actionShowDetail_triggered()
+{
+    // 竖着显示个人信息，在一个新页面吧。
+}
+
+void MainWindow::on_tableViewDepart_customContextMenuRequested(const QPoint &pos)
+{
+    int rowNum = ui->tableViewDepart->verticalHeader()->logicalIndexAt(pos);
+    int colNum = ui->tableViewDepart->horizontalHeader()->logicalIndexAt(pos);
+
+    qDebug() << "row num:" << rowNum << "colNum:" << colNum;
+
+    gRowNum = rowNum;
+
+    QMenu *popMenu = new QMenu(this);
+    popMenu->addAction(ui->actionDepartShowSecond);
+    popMenu->exec(QCursor::pos());
+
+    delete popMenu;
+    gRowNum = -1;
+
+}
+
+void MainWindow::addEditDepartItemsLevelOne()
+{
+    QSqlQuery query;
+    int i = 1;
+
+    ui->comboBoxDepart->clear();
+    ui->comboBoxDepart->insertItem(0, "> 请选择部门");
+    query.exec("select name from depart where level = 1");
+    while(query.next()) {
+        QString name = query.value(0).toString();
+        qDebug() << i << name;
+        ui->comboBoxDepart->insertItem(i, name);
+        i++;
+    }
+}
+
+void MainWindow::addEditDepartItemsLevelTwo()
+{
+    QString name = ui->comboBoxDepart->currentText();
+    if (name.startsWith(">")) return;
+
+    QSqlQuery query;
+    int i = 1;
+    ui->comboBoxDepartSecond->clear();
+    ui->comboBoxDepartSecond->insertItem(0, "> 请选择二级部门");
+    QString sql =  QString("select name from depart where level = 2 and topper = '%1'").arg(name);
+    qDebug() << sql;
+    query.exec(sql);
+    while(query.next()) {
+        QString name = query.value(0).toString();
+        qDebug() << i << name;
+        ui->comboBoxDepartSecond->insertItem(i, name);
+        i++;
+    }
+}
+
+void MainWindow::addDepartItems()
+{
+    QSqlQuery query;
+    int i = 1;
+    ui->comboBoxDepartUpStairs->clear();
+    ui->comboBoxDepartUpStairs->insertItem(0, "> 请选择一级部门");
+    query.exec("select name from depart where level = 1");
+    while(query.next()) {
+        QString name = query.value(0).toString();
+        qDebug() << i << name;
+        //ui->comboBoxDepartUpStairs->setItemText(i, name);
+        ui->comboBoxDepartUpStairs->insertItem(i, name);
+        i++;
+    }
+}
+
+void MainWindow::on_comboBoxDepartLevel_currentIndexChanged(int index)
+{
+    qDebug() << "index:" << index;
+    switch(index) {
+    case 0:
+        break;
+    case 1:
+        // 只有两个级别的部组，顶级部组肯定没有上级部组，所以设置为空。
+        ui->comboBoxDepartUpStairs->clear();
+        ui->comboBoxDepartUpStairs->insertItem(0, "");
+        break;
+    case 2:
+        // add comboxBoxDepartUpStairs items here
+        addDepartItems();
+        break;
+    default:
+        break;
+    }
+}
+
+void MainWindow::on_comboBoxDepart_currentIndexChanged(int index)
+{
+    if (index < 1) return;
+    addEditDepartItemsLevelTwo();
 }

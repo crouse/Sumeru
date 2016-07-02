@@ -2,15 +2,27 @@ CREATE DATABASE IF NOT EXISTS `vol`;
 
 USE `vol`;
 
+CREATE TABLE IF NOT EXISTS `ophistory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL COMMENT '行为',
+  `json` varchar(45) NOT NULL COMMENT '操作记录',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE IF NOT EXISTS `depart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL COMMENT '部组名',
-  `startupdate` varchar(45) NOT NULL COMMENT '部组成立日期',
+  `level` int(4) NOT NULL COMMENT '部组级别',
+  `topper` varchar(64) COMMENT '上级部组名称',
+  `startupdate` varchar(45) NOT NULL COMMENT '成立日期',
+  `enddate` varchar(45) NOT NULL COMMENT '撤销日期',
   `master` varchar(45) NOT NULL COMMENT '主管法师名字',
   `incharge` varchar(45) NOT NULL COMMENT '负责人名',
   `phone` varchar(45) COMMENT '负责人手机号',
   `tel` varchar(45) COMMENT '部组分机号码',
   `stat` varchar(10) COMMENT '部组状态',
+  `notes` varchar(512) COMMENT '其他记录',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -50,7 +62,8 @@ CREATE TABLE IF NOT EXISTS `volunteer` (
   `health` varchar(45) DEFAULT NULL COMMENT '健康状况',
   `race` varchar(45) DEFAULT NULL COMMENT '民族',
   `marriage` varchar(45) DEFAULT NULL COMMENT '婚姻状况',
-  `depart` varchar(128) DEFAULT NULL COMMENT '部门名称',
+  `depart` varchar(128) DEFAULT NULL COMMENT '一级部门名称',
+  `departsecond` varchar(128) DEFAULT NULL COMMENT '二级部门名称',
   `past` varchar(512) DEFAULT NULL COMMENT '学佛历程',
   `whyhere` varchar(512) DEFAULT NULL COMMENT '来山上的因缘',
   `hopefor` varchar(512) DEFAULT NULL COMMENT '来山上有什么希求',
