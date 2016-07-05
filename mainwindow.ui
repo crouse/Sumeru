@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>759</width>
-    <height>839</height>
+    <height>817</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,974 +24,23 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabAdd">
        <attribute name="title">
         <string>录入义工</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QGroupBox" name="gridGroupBoxBase">
-          <property name="title">
-           <string>基本信息：</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout">
-           <item row="11" column="1">
-            <widget class="QComboBox" name="comboBoxMariage">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 婚姻状况选择：</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>已婚</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>未婚</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>离异</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>丧偶</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QLineEdit" name="lineEditPID">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>身份证号码：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="2">
-            <widget class="QLineEdit" name="lineEditEmer">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>紧急联系人：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="0">
-            <widget class="QComboBox" name="comboBoxRace">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 民族选择:</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>汉族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>蒙古族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>回族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>藏族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>维吾尔族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>苗族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>彝族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>壮族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>满族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>朝鲜族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>达斡尔族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>鄂温克族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>鄂伦春族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>赫哲族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>土族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>撒拉族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>东乡族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>保安族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>裕固族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>哈萨克族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>柯尔克孜族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>乌孜别克族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>塔吉克族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>塔塔尔族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>锡伯族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>俄罗斯族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>瑶族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>白族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>傣族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>哈民族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>佤族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>傈傈族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>纳西族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>拉祜族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>景颇族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>布朗族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>阿昌族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>怒族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>德昂族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>独龙族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>普米族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>门巴族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>布依族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>水族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>仡佬族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>侗族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>土家族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>羌族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>仫佬族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>毛南族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>珞巴族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>基诺族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>黎族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>京族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>畲族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>高山族</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>苦聪人</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>登人</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>外籍</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="4" column="2">
-            <widget class="QComboBox" name="comboBoxIfGroup">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 是否已参加学佛小组</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>是</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>否</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QComboBox" name="comboBoxAcademic">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 学历选择</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>大学本科</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>大学专科</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>硕士研究生</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>博士研究生</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>高中</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>初中</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>小学</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>其他</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="10" column="0">
-            <widget class="QLineEdit" name="lineEditEmail">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>电子邮箱：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="1">
-            <widget class="QLineEdit" name="lineEditStayDate">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>常住日期: 如 2016-01-01</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEditHome">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>籍贯：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="2">
-            <widget class="QLineEdit" name="lineEditLicencePlate">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string> 车牌号：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="0">
-            <widget class="QLineEdit" name="lineEditEmerPhone">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>紧急联系人电话：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="1">
-            <widget class="QLineEdit" name="lineEditStartLearnBud">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>学佛始年：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="QLineEdit" name="lineEditBirthday">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>出生年月日：如 1987-01-01</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QLineEdit" name="lineEditHobby">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>技术特长：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLineEdit" name="lineEditName">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>按ENTER可以进入查询，如果存在同名的人，则在查询义工栏输出。</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string comment="name">姓名：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLineEdit" name="lineEditWorkPlace">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>现工作单位：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLineEdit" name="lineEditField">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>专业：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLineEdit" name="lineEditGraduate">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>毕业学校：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLineEdit" name="lineEditNowHome">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>现居住地址：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLineEdit" name="lineEditPhone">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>手机号码：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QLineEdit" name="lineEditJob">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>工作职位：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="2">
-            <widget class="QComboBox" name="comboBoxHealth">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 健康状况选择：</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>良好</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>一般</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>较差</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>严重</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="11" column="2">
-            <widget class="QComboBox" name="comboBoxDepart">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <property name="currentText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QComboBox" name="comboBoxGender">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 选择性别</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>男</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>女</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QComboBox" name="comboBoxIfGuiyi">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 是否已皈依</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>是</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>否</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QComboBox" name="comboBoxIfFZZJ">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 是否已参加佛子之家</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>是</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>否</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLineEdit" name="lineEditCode">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
-             <property name="placeholderText">
-              <string>皈依证号：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="12" column="2">
-            <widget class="QComboBox" name="comboBoxVolunteerType">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 义工类型</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>常住义工</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>短期义工</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>新义工</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="12" column="1">
-            <widget class="QComboBox" name="comboBoxStat">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 义工现在的状态</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>在住</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>退单</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>出家</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="12" column="0">
-            <widget class="QComboBox" name="comboBoxDepartSecond">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
+       <layout class="QVBoxLayout" name="verticalLayout_14">
         <item>
          <widget class="QGroupBox" name="groupBoxPast">
           <property name="title">
-           <string>个人照片信息：</string>
+           <string>个人常用信息：</string>
           </property>
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="0" column="0">
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
             <widget class="QToolButton" name="toolButtonImage">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -1028,21 +77,1061 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <spacer name="horizontalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboBoxGender">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 选择性别</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>男</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>女</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLineEdit" name="lineEditHome">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  籍贯：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="comboBoxRace">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 民族选择:</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>汉族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>蒙古族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>回族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>藏族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>维吾尔族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>苗族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>彝族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>壮族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>满族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>朝鲜族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>达斡尔族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>鄂温克族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>鄂伦春族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>赫哲族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>土族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>撒拉族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>东乡族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>保安族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>裕固族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>哈萨克族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>柯尔克孜族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>乌孜别克族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>塔吉克族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>塔塔尔族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>锡伯族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>俄罗斯族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>瑶族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>白族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>傣族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>哈民族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>佤族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>傈傈族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>纳西族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>拉祜族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>景颇族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>布朗族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>阿昌族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>怒族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>德昂族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>独龙族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>普米族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>门巴族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>布依族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>水族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>仡佬族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>侗族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>土家族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>羌族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>仫佬族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>毛南族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>珞巴族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>基诺族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>黎族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>京族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>畲族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>高山族</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>苦聪人</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>登人</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>外籍</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="lineEditPhone">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  手机号码：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QComboBox" name="comboBoxHealth">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 健康状况选择：</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>良好</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>一般</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>较差</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>严重</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEditNowHome">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  现居住地址：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLineEdit" name="lineEditName">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>按ENTER可以进入查询，如果存在同名的人，则在查询义工栏输出。</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string comment="name">  姓名：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLineEdit" name="lineEditBirthday">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  出生年月日:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QLineEdit" name="lineEditPID">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  身份证号码：</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>1</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QGroupBox" name="gridGroupBoxBase">
+            <property name="title">
+             <string>教育工作信息：</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="3" column="0">
+              <widget class="QComboBox" name="comboBoxAcademic">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 学历选择</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>大学本科</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>大学专科</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>硕士研究生</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>博士研究生</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>高中</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>初中</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>小学</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>其他</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEditField">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  专业：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="lineEditLicencePlate">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  车牌号：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLineEdit" name="lineEditGraduate">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  毕业学校：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="lineEditJob">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  工作职位：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLineEdit" name="lineEditWorkPlace">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  现工作单位：</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_9">
+            <property name="title">
+             <string>其他联系方式等:</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_13">
+             <item>
+              <widget class="QLineEdit" name="lineEditEmail">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  @电子邮箱：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditEmer">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  紧急联系人：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditEmerPhone">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  紧急联系人电话：</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>1</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QGroupBox" name="groupBox_7">
+            <property name="title">
+             <string>学佛信息：</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLineEdit" name="lineEditStartLearnBud">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  学佛始年：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxIfGuiyi">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 是否已皈依</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>是</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>否</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>未知</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditCode">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 2px;</string>
+               </property>
+               <property name="placeholderText">
+                <string>  皈依证号：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxMariage">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 婚姻状况选择：</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>已婚</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>未婚</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>离异</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>丧偶</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxIfGroup">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 是否已参加学佛小组</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>是</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>否</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>未知</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxIfFZZJ">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 是否已参加佛子之家</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>是</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>否</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>未知</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_8">
+            <property name="title">
+             <string>义工信息：</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <widget class="QComboBox" name="comboBoxDepart">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <property name="currentText">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxDepartSecond">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditStayDate">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  常住日期: 如 2016-01-01</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxVolunteerType">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 义工类型</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>常住义工</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>短期义工</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>新义工</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxStat">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>&gt; 义工现在的状态</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>在住</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>退单</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>出家</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditHobby">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="placeholderText">
+                <string>  技术特长：</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>1</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <widget class="QGroupBox" name="groupBoxWhyHere">
@@ -1052,11 +1141,14 @@
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
             <widget class="QPlainTextEdit" name="plainTextEditPast">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="focusPolicy">
               <enum>Qt::WheelFocus</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 5px;</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
@@ -1071,11 +1163,14 @@
            </item>
            <item>
             <widget class="QPlainTextEdit" name="plainTextEditWhyHere">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="focusPolicy">
               <enum>Qt::WheelFocus</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 5px;</string>
              </property>
              <property name="backgroundVisible">
               <bool>false</bool>
@@ -1087,11 +1182,14 @@
            </item>
            <item>
             <widget class="QPlainTextEdit" name="plainTextEditHopeFor">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="focusPolicy">
               <enum>Qt::WheelFocus</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 5px;</string>
              </property>
              <property name="placeholderText">
               <string>有何希求：</string>
@@ -1115,19 +1213,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <widget class="QComboBox" name="comboBoxVDepart">
-             <item>
-              <property name="text">
-               <string>&gt; 选择部门</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item>
             <widget class="QLineEdit" name="lineEditVFieldSearch">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>专业关键字：</string>
              </property>
@@ -1135,9 +1221,6 @@
            </item>
            <item>
             <widget class="QLineEdit" name="lineEditVHobbyKey">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>爱好关键字：</string>
              </property>
@@ -1145,9 +1228,6 @@
            </item>
            <item>
             <widget class="QLineEdit" name="lineEditVName">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>姓名：</string>
              </property>
@@ -1155,9 +1235,6 @@
            </item>
            <item>
             <widget class="QLineEdit" name="lineEditVAge">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>年龄：</string>
              </property>
@@ -1198,9 +1275,6 @@
           <layout class="QGridLayout" name="gridLayout_2">
            <item row="0" column="1">
             <widget class="QLineEdit" name="lineEditDepartStartupDate">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string> 部组成立日期：</string>
              </property>
@@ -1208,9 +1282,6 @@
            </item>
            <item row="2" column="2">
             <widget class="QLineEdit" name="lineEditDepartStat">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>部组状态：是或否</string>
              </property>
@@ -1218,9 +1289,6 @@
            </item>
            <item row="2" column="1">
             <widget class="QLineEdit" name="lineEditDepartTel">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>部组分机号：</string>
              </property>
@@ -1228,9 +1296,6 @@
            </item>
            <item row="0" column="2">
             <widget class="QLineEdit" name="lineEditDepartMaster">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>主管法师：</string>
              </property>
@@ -1238,9 +1303,6 @@
            </item>
            <item row="0" column="0">
             <widget class="QLineEdit" name="lineEditDepartName">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string> 部组名称：</string>
              </property>
@@ -1248,9 +1310,6 @@
            </item>
            <item row="2" column="0">
             <widget class="QLineEdit" name="lineEditDepartPhone">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>负责人手机号：</string>
              </property>
@@ -1258,9 +1317,6 @@
            </item>
            <item row="0" column="3">
             <widget class="QLineEdit" name="lineEditDepartIncharge">
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
-             </property>
              <property name="placeholderText">
               <string>负责人：</string>
              </property>
@@ -1346,9 +1402,6 @@
              </property>
              <property name="toolTip">
               <string>按ENTER可以进入查询，如果存在同名的人，则在查询义工栏输出。</string>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-radius: 2px;</string>
              </property>
              <property name="placeholderText">
               <string comment="name"> 功课名称：</string>
@@ -1582,178 +1635,109 @@
        <attribute name="title">
         <string>系统设置</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>220</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_9">
-          <item>
-           <spacer name="verticalSpacer">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="groupBox">
-            <property name="title">
-             <string>初始化数据库：</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_2">
-             <item>
-              <widget class="QLabel" name="label">
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 102);
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>212</width>
+          <height>184</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>初始化数据库：</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 102);
                                                                     border-radius: 2px;</string>
-               </property>
-               <property name="text">
-                <string> MYSQL DATABASE SUPPORT</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEditDbHost">
-               <property name="styleSheet">
-                <string notr="true">border-radius:2px;</string>
-               </property>
-               <property name="placeholderText">
-                <string> 数据库主机名：</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEditDbUsername">
-               <property name="styleSheet">
-                <string notr="true">border-radius:2px;</string>
-               </property>
-               <property name="placeholderText">
-                <string> 用户名：</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEditDbPassword">
-               <property name="styleSheet">
-                <string notr="true">border-radius:2px;</string>
-               </property>
-               <property name="inputMethodHints">
-                <set>Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
-               </property>
-               <property name="echoMode">
-                <enum>QLineEdit::PasswordEchoOnEdit</enum>
-               </property>
-               <property name="placeholderText">
-                <string> 密码：</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButtonDbInit">
-               <property name="text">
-                <string>初始化数据库</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="groupBox_6">
-            <property name="title">
-             <string>其他默认设置：</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-             <item>
-              <widget class="QLabel" name="label_5">
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 102);
-                                                                    border-radius: 2px;</string>
-               </property>
-               <property name="text">
-                <string> 本软件文件暂存路径：</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEditConfGPath">
-               <property name="styleSheet">
-                <string notr="true">border-radius:2px;</string>
-               </property>
-               <property name="placeholderText">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_6">
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 102);
-                                                                    border-radius: 2px;</string>
-               </property>
-               <property name="text">
-                <string> 网络地址：</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEditConfGHostName">
-               <property name="styleSheet">
-                <string notr="true">border-radius:2px;</string>
-               </property>
-               <property name="placeholderText">
-                <string/>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>220</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
+           </property>
+           <property name="text">
+            <string> MYSQL DATABASE SUPPORT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditDbHost">
+           <property name="placeholderText">
+            <string> 数据库主机名：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditDbUsername">
+           <property name="placeholderText">
+            <string> 用户名：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditDbPassword">
+           <property name="inputMethodHints">
+            <set>Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::PasswordEchoOnEdit</enum>
+           </property>
+           <property name="placeholderText">
+            <string> 密码：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonDbInit">
+           <property name="text">
+            <string>初始化数据库</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>40</y>
+          <width>164</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>其他默认设置：</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string> 本软件文件暂存路径：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditConfGPath">
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string> 网络地址：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditConfGHostName">
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -1769,6 +1753,7 @@
    <addaction name="actionConnect"/>
    <addaction name="actionSave"/>
    <addaction name="actionSearch"/>
+   <addaction name="actionClearEditWindow"/>
   </widget>
   <widget class="QStatusBar" name="statusBar">
    <property name="styleSheet">
@@ -1817,10 +1802,10 @@
   </action>
   <action name="actionShowDetail">
    <property name="text">
-    <string>  @ 竖着显示详细</string>
+    <string>  @ 在编辑栏显示信息</string>
    </property>
    <property name="toolTip">
-    <string>  @ 竖着显示</string>
+    <string>  @ 在编辑栏显示</string>
    </property>
   </action>
   <action name="actionTransferHistory">
@@ -1841,75 +1826,57 @@
     <string>  * 显示二级部门列表</string>
    </property>
   </action>
+  <action name="actionShowPersonImage">
+   <property name="text">
+    <string>  ^_^ 显示个人照片</string>
+   </property>
+  </action>
+  <action name="actionClearEditWindow">
+   <property name="icon">
+    <iconset resource="files.qrc">
+     <normaloff>:/files/broom.png</normaloff>:/files/broom.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除编辑窗</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
+  <tabstop>toolButtonImage</tabstop>
   <tabstop>lineEditName</tabstop>
   <tabstop>comboBoxGender</tabstop>
   <tabstop>lineEditBirthday</tabstop>
   <tabstop>lineEditPhone</tabstop>
+  <tabstop>comboBoxRace</tabstop>
+  <tabstop>comboBoxHealth</tabstop>
   <tabstop>lineEditHome</tabstop>
   <tabstop>lineEditNowHome</tabstop>
-  <tabstop>lineEditGraduate</tabstop>
-  <tabstop>comboBoxAcademic</tabstop>
-  <tabstop>lineEditField</tabstop>
-  <tabstop>lineEditWorkPlace</tabstop>
-  <tabstop>lineEditJob</tabstop>
-  <tabstop>lineEditHobby</tabstop>
-  <tabstop>comboBoxIfGuiyi</tabstop>
-  <tabstop>lineEditCode</tabstop>
-  <tabstop>comboBoxIfGroup</tabstop>
-  <tabstop>comboBoxIfFZZJ</tabstop>
   <tabstop>lineEditPID</tabstop>
+  <tabstop>lineEditGraduate</tabstop>
+  <tabstop>lineEditField</tabstop>
+  <tabstop>comboBoxAcademic</tabstop>
+  <tabstop>lineEditJob</tabstop>
+  <tabstop>lineEditWorkPlace</tabstop>
+  <tabstop>lineEditLicencePlate</tabstop>
+  <tabstop>lineEditEmail</tabstop>
   <tabstop>lineEditEmer</tabstop>
   <tabstop>lineEditEmerPhone</tabstop>
   <tabstop>lineEditStartLearnBud</tabstop>
-  <tabstop>lineEditLicencePlate</tabstop>
-  <tabstop>lineEditEmail</tabstop>
-  <tabstop>lineEditStayDate</tabstop>
-  <tabstop>comboBoxHealth</tabstop>
-  <tabstop>comboBoxRace</tabstop>
+  <tabstop>comboBoxIfGuiyi</tabstop>
+  <tabstop>lineEditCode</tabstop>
   <tabstop>comboBoxMariage</tabstop>
+  <tabstop>comboBoxIfGroup</tabstop>
+  <tabstop>comboBoxIfFZZJ</tabstop>
   <tabstop>comboBoxDepart</tabstop>
   <tabstop>comboBoxDepartSecond</tabstop>
-  <tabstop>comboBoxStat</tabstop>
+  <tabstop>lineEditStayDate</tabstop>
   <tabstop>comboBoxVolunteerType</tabstop>
-  <tabstop>toolButtonImage</tabstop>
+  <tabstop>comboBoxStat</tabstop>
+  <tabstop>lineEditHobby</tabstop>
   <tabstop>plainTextEditPast</tabstop>
   <tabstop>plainTextEditWhyHere</tabstop>
   <tabstop>plainTextEditHopeFor</tabstop>
-  <tabstop>comboBox_4</tabstop>
-  <tabstop>pushButton_4</tabstop>
-  <tabstop>pushButton_5</tabstop>
-  <tabstop>dateEdit</tabstop>
-  <tabstop>dateEdit_2</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>lineEditDbHost</tabstop>
-  <tabstop>lineEditDbUsername</tabstop>
-  <tabstop>lineEditDbPassword</tabstop>
-  <tabstop>pushButtonDbInit</tabstop>
-  <tabstop>tableView_3</tabstop>
-  <tabstop>tableView_4</tabstop>
-  <tabstop>tableViewDepart</tabstop>
-  <tabstop>tableView</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>lineEditDepartName</tabstop>
-  <tabstop>lineEditDepartStat</tabstop>
-  <tabstop>lineEditDepartTel</tabstop>
-  <tabstop>dateEdit_3</tabstop>
-  <tabstop>lineEditDepartIncharge</tabstop>
-  <tabstop>lineEditDepartMaster</tabstop>
-  <tabstop>lineEditDepartStartupDate</tabstop>
-  <tabstop>lineEditDepartPhone</tabstop>
-  <tabstop>comboBoxVDepart</tabstop>
-  <tabstop>lineEditVFieldSearch</tabstop>
-  <tabstop>lineEditVHobbyKey</tabstop>
-  <tabstop>lineEditVName</tabstop>
-  <tabstop>lineEditVAge</tabstop>
-  <tabstop>pushButtonVSearch</tabstop>
-  <tabstop>pushButtonDepartSave</tabstop>
-  <tabstop>lineEditLessonName</tabstop>
   <tabstop>comboBoxLesson</tabstop>
   <tabstop>spinBoxLesson</tabstop>
   <tabstop>pushButtonLessonSave</tabstop>
@@ -1921,6 +1888,37 @@
   <tabstop>comboBoxDepartLevel</tabstop>
   <tabstop>comboBoxDepartUpStairs</tabstop>
   <tabstop>treeView</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pushButtonVSearch</tabstop>
+  <tabstop>lineEditLessonName</tabstop>
+  <tabstop>dateEdit_2</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButtonDepartSave</tabstop>
+  <tabstop>comboBox_4</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>lineEditDbPassword</tabstop>
+  <tabstop>lineEditDbUsername</tabstop>
+  <tabstop>tableView_4</tabstop>
+  <tabstop>lineEditDbHost</tabstop>
+  <tabstop>pushButtonDbInit</tabstop>
+  <tabstop>tableView_3</tabstop>
+  <tabstop>tableViewDepart</tabstop>
+  <tabstop>tableView</tabstop>
+  <tabstop>lineEditDepartName</tabstop>
+  <tabstop>lineEditDepartStat</tabstop>
+  <tabstop>lineEditDepartTel</tabstop>
+  <tabstop>dateEdit_3</tabstop>
+  <tabstop>lineEditDepartIncharge</tabstop>
+  <tabstop>lineEditDepartMaster</tabstop>
+  <tabstop>lineEditDepartStartupDate</tabstop>
+  <tabstop>lineEditDepartPhone</tabstop>
+  <tabstop>lineEditVFieldSearch</tabstop>
+  <tabstop>lineEditVHobbyKey</tabstop>
+  <tabstop>lineEditVName</tabstop>
+  <tabstop>lineEditVAge</tabstop>
  </tabstops>
  <resources>
   <include location="files.qrc"/>

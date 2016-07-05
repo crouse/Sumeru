@@ -24,9 +24,10 @@
 #include <QNetworkRequest>
 #include <QByteArray>
 #include <QComboBox>
-#define DB_HOSTNAME "192.168.1.1"
+#include <QCryptographicHash>
+#define DB_HOSTNAME "192.168.128.10"
 #define DB_USERNAME "volunteer"
-#define DB_PASSWORD "amituofo"
+#define DB_PASSWORD "amit"
 #define DB_NAME "vol"
 #define FTP_PATH "/home/sumeru/images"
 #define FTP_USER "sumeru"
@@ -45,11 +46,12 @@ public:
     ~MainWindow();
     QLineEdit *lineEditUserName;
     QLineEdit *lineEditPassWord;
-    QLineEdit *lineEditSearch;
+    // QLineEdit *lineEditSearch;
 
     void initToolBarLineEdits();
     bool testIfLineEditEmpty();
     bool testIfhasThisRecord(QString pid);
+    bool saveImageToDb(QString pid, QString filePath);
     bool initDatabase(QString hostname, QString username, QString password);
     bool connDatabase(QString hostname, QString username, QString password);
     bool portTest(QString ip, int port);
@@ -62,6 +64,13 @@ public:
     void addDepartItems();
     void addEditDepartItemsLevelOne();
     void addEditDepartItemsLevelTwo();
+    void showDetail();
+    void updateInfo(int id);
+
+    bool verify();
+    QByteArray getImageFromDb(QString pid);
+
+
 
     QString gDocumentPath;
 
@@ -105,9 +114,18 @@ private slots:
 
     void on_comboBoxDepart_currentIndexChanged(int index);
 
+    void on_actionShowPersonImage_triggered();
+
+    void on_actionClearEditWindow_triggered();
+
 private:
     Ui::MainWindow *ui;
     int gRowNum;
+    QString gImageAbsPath;
+
+    int gUserLevel;
+    int gModifySwitch;
+    int gId;
 };
 
 #endif // MAINWINDOW_H

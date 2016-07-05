@@ -4,5 +4,6 @@
         <file>files/save.png</file>
         <file>files/search.png</file>
         <file>files/init.sql</file>
+        <file>files/broom.png</file>
     </qresource>
 </RCC>

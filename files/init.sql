@@ -2,6 +2,23 @@ CREATE DATABASE IF NOT EXISTS `vol`;
 
 USE `vol`;
 
+CREATE TABLE IF NOT EXISTS `images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` varchar(45) NOT NULL COMMENT '身份证号',
+  `image` mediumblob COMMENT '图像的二进制文件存放',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `sumeru_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL COMMENT '用户名称',
+  `password` varchar(45) NOT NULL COMMENT '用户密码哈希值',
+  `level` int NOT NULL DEFAULT 1 COMMENT '用户级别',
+  `mac` varchar(45) NOT NULL COMMENT '用户硬件网卡地址',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE IF NOT EXISTS `ophistory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL COMMENT '行为',
