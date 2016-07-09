@@ -25,13 +25,11 @@
 #include <QByteArray>
 #include <QComboBox>
 #include <QCryptographicHash>
-#define DB_HOSTNAME "192.168.128.10"
+
+#define DB_HOSTNAME "192.168.1.2"
 #define DB_USERNAME "volunteer"
-#define DB_PASSWORD "amit"
+#define DB_PASSWORD "abc"
 #define DB_NAME "vol"
-#define FTP_PATH "/home/sumeru/images"
-#define FTP_USER "sumeru"
-#define FTP_PASSWORD "7d1d4f8c0e"
 
 namespace Ui {
 class MainWindow;
@@ -62,6 +60,7 @@ public:
 
     void searchBy();
     void addDepartItems();
+    void addComboBoxValues(QComboBox *&combox, QString filter);
     void addEditDepartItemsLevelOne();
     void addEditDepartItemsLevelTwo();
     void showDetail();
@@ -117,6 +116,8 @@ private slots:
     void on_actionShowPersonImage_triggered();
 
     void on_actionClearEditWindow_triggered();
+
+    void on_comboBoxQDepart_currentIndexChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

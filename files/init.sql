@@ -2,56 +2,31 @@ CREATE DATABASE IF NOT EXISTS `vol`;
 
 USE `vol`;
 
-CREATE TABLE IF NOT EXISTS `images` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `pid` varchar(45) NOT NULL COMMENT '身份证号',
-  `image` mediumblob COMMENT '图像的二进制文件存放',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE IF NOT EXISTS `sumeru_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) NOT NULL COMMENT '用户名称',
-  `password` varchar(45) NOT NULL COMMENT '用户密码哈希值',
-  `level` int NOT NULL DEFAULT 1 COMMENT '用户级别',
-  `mac` varchar(45) NOT NULL COMMENT '用户硬件网卡地址',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE IF NOT EXISTS `ophistory` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL COMMENT '行为',
-  `json` varchar(45) NOT NULL COMMENT '操作记录',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE IF NOT EXISTS `depart` (
+CREATE TABLE `depart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL COMMENT '部组名',
   `level` int(4) NOT NULL COMMENT '部组级别',
-  `topper` varchar(64) COMMENT '上级部组名称',
+  `topper` varchar(64) DEFAULT NULL COMMENT '上级部组名称',
   `startupdate` varchar(45) NOT NULL COMMENT '成立日期',
   `enddate` varchar(45) NOT NULL COMMENT '撤销日期',
   `master` varchar(45) NOT NULL COMMENT '主管法师名字',
   `incharge` varchar(45) NOT NULL COMMENT '负责人名',
-  `phone` varchar(45) COMMENT '负责人手机号',
-  `tel` varchar(45) COMMENT '部组分机号码',
-  `stat` varchar(10) COMMENT '部组状态',
-  `notes` varchar(512) COMMENT '其他记录',
+  `phone` varchar(45) DEFAULT NULL COMMENT '负责人手机号',
+  `tel` varchar(45) DEFAULT NULL COMMENT '部组分机号码',
+  `stat` varchar(10) DEFAULT NULL COMMENT '部组状态',
+  `notes` varchar(512) DEFAULT NULL COMMENT '其他记录',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `lesson` (
+CREATE TABLE `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL COMMENT '功课名称',
-  `score` int(4) NOT NULL COMMENT '分值',
+  `pid` varchar(45) NOT NULL COMMENT '身份证号',
+  `image` mediumblob COMMENT '图像的二进制文件存放',
+  `uptime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '插入图片时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=157 DEFAULT CHARSET=utf8;
 
-
-CREATE TABLE IF NOT EXISTS `volunteer` (
+CREATE TABLE `volunteer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL COMMENT '姓名',
   `gender` varchar(10) DEFAULT NULL COMMENT '性别',
@@ -86,5 +61,21 @@ CREATE TABLE IF NOT EXISTS `volunteer` (
   `hopefor` varchar(512) DEFAULT NULL COMMENT '来山上有什么希求',
   `stat` varchar(12) NOT NULL COMMENT '义工状态',
   `voltype` varchar(32) NOT NULL COMMENT '义工类型',
+  `notes` varchar(512) DEFAULT NULL COMMENT '其他记录',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `pid_UNIQUE` (`pid`)
+) ENGINE=InnoDB AUTO_INCREMENT=348 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `sumeru_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL COMMENT '用户名称',
+  `password` varchar(45) NOT NULL COMMENT '用户密码哈希值',
+  `mac` varchar(45) NOT NULL COMMENT '用户硬件网卡地址',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+
+
+
+

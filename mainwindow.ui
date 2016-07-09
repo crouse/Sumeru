@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>759</width>
+    <width>782</width>
     <height>817</height>
    </rect>
   </property>
@@ -24,7 +24,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabAdd">
        <attribute name="title">
@@ -741,7 +741,7 @@
                 <string notr="true"/>
                </property>
                <property name="placeholderText">
-                <string>  现工作单位：</string>
+                <string>  (曾/现) 工作单位：</string>
                </property>
               </widget>
              </item>
@@ -956,7 +956,7 @@
                </property>
                <item>
                 <property name="text">
-                 <string>&gt; 是否已参加学佛小组</string>
+                 <string>&gt; 是否参加过学佛小组</string>
                 </property>
                </item>
                <item>
@@ -1062,6 +1062,16 @@
                <item>
                 <property name="text">
                  <string>新义工</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>山下义工</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>准净人班</string>
                 </property>
                </item>
               </widget>
@@ -1211,40 +1221,193 @@
           <property name="title">
            <string>按条件查询：</string>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QLineEdit" name="lineEditVFieldSearch">
-             <property name="placeholderText">
-              <string>专业关键字：</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEditVHobbyKey">
-             <property name="placeholderText">
-              <string>爱好关键字：</string>
-             </property>
-            </widget>
-           </item>
-           <item>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
             <widget class="QLineEdit" name="lineEditVName">
              <property name="placeholderText">
               <string>姓名：</string>
              </property>
             </widget>
            </item>
-           <item>
-            <widget class="QLineEdit" name="lineEditVAge">
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditQPhone">
              <property name="placeholderText">
-              <string>年龄：</string>
+              <string>手机号码：</string>
              </property>
             </widget>
            </item>
-           <item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="lineEditVFieldSearch">
+             <property name="placeholderText">
+              <string>专业关键字：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3" colspan="2">
+            <widget class="QLineEdit" name="lineEditVHobbyKey">
+             <property name="placeholderText">
+              <string>爱好关键字：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLineEdit" name="lineEditQHome">
+             <property name="placeholderText">
+              <string> 籍贯：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="comboBoxQGender">
+             <item>
+              <property name="text">
+               <string>&gt; 性别</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>男</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>女</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QComboBox" name="comboBoxQAge">
+             <item>
+              <property name="text">
+               <string>&gt; 年龄段</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>童年</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>少年</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>青年</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>中年</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>老年</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QComboBox" name="comboBoxQSecondDepart">
+             <item>
+              <property name="text">
+               <string>&gt; 选择二级部门</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="comboBoxQIfGroup">
+             <item>
+              <property name="text">
+               <string>&gt; 是否参加过学佛小组</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>是</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>否</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QComboBox" name="comboBoxQFZZJ">
+             <item>
+              <property name="text">
+               <string>&gt; FZZJ</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>是</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>否</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QComboBox" name="comboBoxQVolunteerType">
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>&gt; 义工类型</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>新义工</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>常住义工</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>短期义工</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>山下义工</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>准净人班</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="4">
             <widget class="QPushButton" name="pushButtonVSearch">
              <property name="text">
               <string>查询</string>
              </property>
+            </widget>
+           </item>
+           <item row="1" column="3" colspan="2">
+            <widget class="QComboBox" name="comboBoxQDepart">
+             <item>
+              <property name="text">
+               <string>&gt; 选择一级部门</string>
+              </property>
+             </item>
             </widget>
            </item>
           </layout>
@@ -1843,7 +2006,6 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>toolButtonImage</tabstop>
   <tabstop>lineEditName</tabstop>
   <tabstop>comboBoxGender</tabstop>
   <tabstop>lineEditBirthday</tabstop>
@@ -1877,48 +2039,47 @@
   <tabstop>plainTextEditPast</tabstop>
   <tabstop>plainTextEditWhyHere</tabstop>
   <tabstop>plainTextEditHopeFor</tabstop>
+  <tabstop>lineEditVName</tabstop>
+  <tabstop>lineEditVFieldSearch</tabstop>
+  <tabstop>lineEditVHobbyKey</tabstop>
+  <tabstop>lineEditDepartName</tabstop>
+  <tabstop>lineEditDepartStartupDate</tabstop>
+  <tabstop>lineEditDepartMaster</tabstop>
+  <tabstop>lineEditDepartIncharge</tabstop>
+  <tabstop>lineEditDepartPhone</tabstop>
+  <tabstop>lineEditDepartTel</tabstop>
+  <tabstop>lineEditDepartStat</tabstop>
+  <tabstop>comboBoxDepartLevel</tabstop>
+  <tabstop>comboBoxDepartUpStairs</tabstop>
+  <tabstop>pushButtonDepartSave</tabstop>
+  <tabstop>lineEditLessonName</tabstop>
   <tabstop>comboBoxLesson</tabstop>
   <tabstop>spinBoxLesson</tabstop>
   <tabstop>pushButtonLessonSave</tabstop>
+  <tabstop>dateEdit_3</tabstop>
+  <tabstop>comboBox_4</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>dateEdit_2</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>lineEditDbHost</tabstop>
+  <tabstop>lineEditDbUsername</tabstop>
+  <tabstop>lineEditDbPassword</tabstop>
+  <tabstop>pushButtonDbInit</tabstop>
+  <tabstop>lineEditConfGPath</tabstop>
+  <tabstop>lineEditConfGHostName</tabstop>
+  <tabstop>tableView_4</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tableView_3</tabstop>
+  <tabstop>tableView</tabstop>
+  <tabstop>toolButtonImage</tabstop>
   <tabstop>tableViewLesson</tabstop>
   <tabstop>tableViewRecord</tabstop>
   <tabstop>tableViewTransfer</tabstop>
-  <tabstop>lineEditConfGPath</tabstop>
-  <tabstop>lineEditConfGHostName</tabstop>
-  <tabstop>comboBoxDepartLevel</tabstop>
-  <tabstop>comboBoxDepartUpStairs</tabstop>
-  <tabstop>treeView</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>pushButtonVSearch</tabstop>
-  <tabstop>lineEditLessonName</tabstop>
-  <tabstop>dateEdit_2</tabstop>
-  <tabstop>pushButton_5</tabstop>
-  <tabstop>pushButton_4</tabstop>
-  <tabstop>dateEdit</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>pushButtonDepartSave</tabstop>
-  <tabstop>comboBox_4</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>lineEditDbPassword</tabstop>
-  <tabstop>lineEditDbUsername</tabstop>
-  <tabstop>tableView_4</tabstop>
-  <tabstop>lineEditDbHost</tabstop>
-  <tabstop>pushButtonDbInit</tabstop>
-  <tabstop>tableView_3</tabstop>
   <tabstop>tableViewDepart</tabstop>
-  <tabstop>tableView</tabstop>
-  <tabstop>lineEditDepartName</tabstop>
-  <tabstop>lineEditDepartStat</tabstop>
-  <tabstop>lineEditDepartTel</tabstop>
-  <tabstop>dateEdit_3</tabstop>
-  <tabstop>lineEditDepartIncharge</tabstop>
-  <tabstop>lineEditDepartMaster</tabstop>
-  <tabstop>lineEditDepartStartupDate</tabstop>
-  <tabstop>lineEditDepartPhone</tabstop>
-  <tabstop>lineEditVFieldSearch</tabstop>
-  <tabstop>lineEditVHobbyKey</tabstop>
-  <tabstop>lineEditVName</tabstop>
-  <tabstop>lineEditVAge</tabstop>
+  <tabstop>treeView</tabstop>
  </tabstops>
  <resources>
   <include location="files.qrc"/>
