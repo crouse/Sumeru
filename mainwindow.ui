@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>782</width>
-    <height>817</height>
+    <height>818</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,12 +23,15 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <widget class="QWidget" name="tabAdd">
        <attribute name="title">
-        <string>录入义工</string>
+        <string>基础信息</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_14">
         <item>
@@ -87,6 +90,9 @@
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="toolTip">
+                <string>性别：男或者女</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -121,6 +127,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>籍贯地址</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -131,6 +140,9 @@
              </item>
              <item row="1" column="1">
               <widget class="QComboBox" name="comboBoxRace">
+               <property name="toolTip">
+                <string>民族</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -450,6 +462,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>手机号码</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -460,6 +475,9 @@
              </item>
              <item row="1" column="2">
               <widget class="QComboBox" name="comboBoxHealth">
+               <property name="toolTip">
+                <string>健康情况</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -503,6 +521,9 @@
                  <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="toolTip">
+                <string>现居地址</string>
                </property>
                <property name="styleSheet">
                 <string notr="true"/>
@@ -551,6 +572,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>出生年月日：请用如 1987-01-01 格式</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -572,6 +596,9 @@
                  <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="toolTip">
+                <string>身份证号码</string>
                </property>
                <property name="styleSheet">
                 <string notr="true"/>
@@ -609,6 +636,9 @@
             <layout class="QGridLayout" name="gridLayout">
              <item row="3" column="0">
               <widget class="QComboBox" name="comboBoxAcademic">
+               <property name="toolTip">
+                <string>学历选择</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -673,6 +703,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>专业</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -683,6 +716,9 @@
              </item>
              <item row="4" column="1">
               <widget class="QLineEdit" name="lineEditLicencePlate">
+               <property name="toolTip">
+                <string>车牌号</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -704,6 +740,9 @@
                  <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="toolTip">
+                <string>毕业学校</string>
                </property>
                <property name="styleSheet">
                 <string notr="true"/>
@@ -727,6 +766,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>工作职位</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -737,6 +779,9 @@
              </item>
              <item row="4" column="0">
               <widget class="QLineEdit" name="lineEditWorkPlace">
+               <property name="toolTip">
+                <string>曾经/现在的工作</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -768,6 +813,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>电子邮箱地址</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -790,6 +838,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>紧急联系人姓名</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -811,6 +862,9 @@
                  <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="toolTip">
+                <string>紧急联系人电话</string>
                </property>
                <property name="styleSheet">
                 <string notr="true"/>
@@ -860,6 +914,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>学佛开始年份</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true"/>
                </property>
@@ -870,6 +927,9 @@
              </item>
              <item>
               <widget class="QComboBox" name="comboBoxIfGuiyi">
+               <property name="toolTip">
+                <string>是否已经皈依</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -909,6 +969,9 @@
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="toolTip">
+                <string>皈依证号码</string>
+               </property>
                <property name="styleSheet">
                 <string notr="true">border-radius: 2px;</string>
                </property>
@@ -919,6 +982,9 @@
              </item>
              <item>
               <widget class="QComboBox" name="comboBoxMariage">
+               <property name="toolTip">
+                <string>婚姻状况</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -951,6 +1017,9 @@
              </item>
              <item>
               <widget class="QComboBox" name="comboBoxIfGroup">
+               <property name="toolTip">
+                <string>是否参加过学佛小组</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -978,6 +1047,9 @@
              </item>
              <item>
               <widget class="QComboBox" name="comboBoxIfFZZJ">
+               <property name="toolTip">
+                <string>是否参加过佛子之家</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -1014,6 +1086,9 @@
             <layout class="QVBoxLayout" name="verticalLayout_12">
              <item>
               <widget class="QComboBox" name="comboBoxDepart">
+               <property name="toolTip">
+                <string>所属第一级别部门</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -1024,6 +1099,9 @@
              </item>
              <item>
               <widget class="QComboBox" name="comboBoxDepartSecond">
+               <property name="toolTip">
+                <string>所属第二级别部门，可空</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -1041,6 +1119,9 @@
              </item>
              <item>
               <widget class="QComboBox" name="comboBoxVolunteerType">
+               <property name="toolTip">
+                <string>义工类型</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -1078,6 +1159,9 @@
              </item>
              <item>
               <widget class="QComboBox" name="comboBoxStat">
+               <property name="toolTip">
+                <string>义工现在的状态</string>
+               </property>
                <property name="editable">
                 <bool>true</bool>
                </property>
@@ -1116,6 +1200,9 @@
                  <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="toolTip">
+                <string>技术特长</string>
                </property>
                <property name="styleSheet">
                 <string notr="true"/>
@@ -1160,6 +1247,9 @@
              <property name="focusPolicy">
               <enum>Qt::WheelFocus</enum>
              </property>
+             <property name="toolTip">
+              <string>学佛因缘</string>
+             </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
@@ -1182,6 +1272,9 @@
              <property name="focusPolicy">
               <enum>Qt::WheelFocus</enum>
              </property>
+             <property name="toolTip">
+              <string>来龙泉寺的因缘</string>
+             </property>
              <property name="backgroundVisible">
               <bool>false</bool>
              </property>
@@ -1201,12 +1294,318 @@
              <property name="focusPolicy">
               <enum>Qt::WheelFocus</enum>
              </property>
+             <property name="toolTip">
+              <string>有什么希求</string>
+             </property>
              <property name="placeholderText">
               <string>有何希求：</string>
              </property>
             </widget>
            </item>
           </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabFamily">
+       <attribute name="title">
+        <string>家庭信息</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string>家庭信息编辑：</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="3">
+            <widget class="QLineEdit" name="lineEditFaRelation">
+             <property name="toolTip">
+              <string>和义工之间的关系：如父亲</string>
+             </property>
+             <property name="placeholderText">
+              <string>  家庭成员关系：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditFaName">
+             <property name="toolTip">
+              <string>家庭成员姓名</string>
+             </property>
+             <property name="placeholderText">
+              <string>  家庭成员姓名：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLineEdit" name="lineEditFaVolunteerPID">
+             <property name="toolTip">
+              <string>义工身份证号码，是义工身份证号码，不是家庭成员身份证号码</string>
+             </property>
+             <property name="placeholderText">
+              <string>  义工身份证号码：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="lineEditFaBirthday">
+             <property name="toolTip">
+              <string>家庭成员生日，写年份就行，用阿拉伯数字，比如 1987</string>
+             </property>
+             <property name="placeholderText">
+              <string>  家庭成员生日：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLineEdit" name="lineEditFaAddress">
+             <property name="toolTip">
+              <string>家庭成员居住地址</string>
+             </property>
+             <property name="placeholderText">
+              <string>  家庭成员居住地址：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEditFaPhone">
+             <property name="toolTip">
+              <string>家庭成员手机号码</string>
+             </property>
+             <property name="placeholderText">
+              <string>  家庭成员手机号码：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QComboBox" name="comboBoxFaHealth">
+             <property name="toolTip">
+              <string>家庭成员健康情况</string>
+             </property>
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>&gt; 健康状况选择：</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>良好</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>一般</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>较差</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>严重</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QPushButton" name="pushButtonFaSave">
+             <property name="toolTip">
+              <string>保存家庭成员信息</string>
+             </property>
+             <property name="text">
+              <string>保存</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="tableViewFamily">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>学习就业</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>学习就业信息：</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLineEdit" name="lineEditEPID">
+             <property name="toolTip">
+              <string>义工的身份证号码</string>
+             </property>
+             <property name="placeholderText">
+              <string>  义工身份证号码：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditEStart">
+             <property name="toolTip">
+              <string>工作就业的开始年份</string>
+             </property>
+             <property name="placeholderText">
+              <string>  开始年份：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="lineEditEEnd">
+             <property name="toolTip">
+              <string>工作就业的结束年份</string>
+             </property>
+             <property name="placeholderText">
+              <string>  结束年份：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLineEdit" name="lineEditEPlace">
+             <property name="toolTip">
+              <string>工作单位或者学校</string>
+             </property>
+             <property name="placeholderText">
+              <string>  工作单位或者学校：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEditENotes">
+             <property name="toolTip">
+              <string>其他记录</string>
+             </property>
+             <property name="placeholderText">
+              <string>  其他记录：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButton">
+             <property name="text">
+              <string>保存</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="tableViewEduJob">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTransfer">
+       <attribute name="title">
+        <string>部门调动</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="title">
+           <string>调动部门编辑：</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="lineEditDepartPID">
+             <property name="toolTip">
+              <string>义工的身份证号码</string>
+             </property>
+             <property name="placeholderText">
+              <string>  义工身份证号码：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBoxTransferDepartOne">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>调入的第一级部门</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>&gt; 调入一级部门</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBoxTransferDepartTwo">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="toolTip">
+              <string>调入的第二级部门</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>&gt; 调入二级部门</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="dateEditTransfer">
+             <property name="toolTip">
+              <string>调入日期，如果记不清，可以写大概日期</string>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::PlusMinus</enum>
+             </property>
+             <property name="displayFormat">
+              <string>yyyy-MM-dd</string>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonTransferSave">
+             <property name="text">
+              <string>保存</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableView" name="tableViewTransfer">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
          </widget>
         </item>
        </layout>
@@ -1224,6 +1623,9 @@
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0">
             <widget class="QLineEdit" name="lineEditVName">
+             <property name="toolTip">
+              <string>姓名</string>
+             </property>
              <property name="placeholderText">
               <string>姓名：</string>
              </property>
@@ -1231,6 +1633,9 @@
            </item>
            <item row="0" column="1">
             <widget class="QLineEdit" name="lineEditQPhone">
+             <property name="toolTip">
+              <string>手机号码</string>
+             </property>
              <property name="placeholderText">
               <string>手机号码：</string>
              </property>
@@ -1238,6 +1643,9 @@
            </item>
            <item row="0" column="2">
             <widget class="QLineEdit" name="lineEditVFieldSearch">
+             <property name="toolTip">
+              <string>专业关键字</string>
+             </property>
              <property name="placeholderText">
               <string>专业关键字：</string>
              </property>
@@ -1245,6 +1653,9 @@
            </item>
            <item row="0" column="3" colspan="2">
             <widget class="QLineEdit" name="lineEditVHobbyKey">
+             <property name="toolTip">
+              <string>爱好关键字</string>
+             </property>
              <property name="placeholderText">
               <string>爱好关键字：</string>
              </property>
@@ -1252,6 +1663,9 @@
            </item>
            <item row="1" column="0">
             <widget class="QLineEdit" name="lineEditQHome">
+             <property name="toolTip">
+              <string>籍贯关键字</string>
+             </property>
              <property name="placeholderText">
               <string> 籍贯：</string>
              </property>
@@ -1259,6 +1673,9 @@
            </item>
            <item row="1" column="1">
             <widget class="QComboBox" name="comboBoxQGender">
+             <property name="toolTip">
+              <string>性别</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; 性别</string>
@@ -1278,6 +1695,9 @@
            </item>
            <item row="1" column="2">
             <widget class="QComboBox" name="comboBoxQAge">
+             <property name="toolTip">
+              <string>年龄段</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; 年龄段</string>
@@ -1312,6 +1732,9 @@
            </item>
            <item row="2" column="0">
             <widget class="QComboBox" name="comboBoxQSecondDepart">
+             <property name="toolTip">
+              <string>二级别部门名称</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; 选择二级部门</string>
@@ -1321,6 +1744,9 @@
            </item>
            <item row="2" column="1">
             <widget class="QComboBox" name="comboBoxQIfGroup">
+             <property name="toolTip">
+              <string>是否参加过学佛小组</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; 是否参加过学佛小组</string>
@@ -1340,6 +1766,9 @@
            </item>
            <item row="2" column="2">
             <widget class="QComboBox" name="comboBoxQFZZJ">
+             <property name="toolTip">
+              <string>是否是佛子之家成员</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; FZZJ</string>
@@ -1359,6 +1788,9 @@
            </item>
            <item row="2" column="3">
             <widget class="QComboBox" name="comboBoxQVolunteerType">
+             <property name="toolTip">
+              <string>义工类型</string>
+             </property>
              <property name="editable">
               <bool>false</bool>
              </property>
@@ -1403,6 +1835,9 @@
            </item>
            <item row="1" column="3" colspan="2">
             <widget class="QComboBox" name="comboBoxQDepart">
+             <property name="toolTip">
+              <string>一级别部门名称</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; 选择一级部门</string>
@@ -1438,6 +1873,9 @@
           <layout class="QGridLayout" name="gridLayout_2">
            <item row="0" column="1">
             <widget class="QLineEdit" name="lineEditDepartStartupDate">
+             <property name="toolTip">
+              <string>部组成立日期</string>
+             </property>
              <property name="placeholderText">
               <string> 部组成立日期：</string>
              </property>
@@ -1445,6 +1883,9 @@
            </item>
            <item row="2" column="2">
             <widget class="QLineEdit" name="lineEditDepartStat">
+             <property name="toolTip">
+              <string>部组是否还存在</string>
+             </property>
              <property name="placeholderText">
               <string>部组状态：是或否</string>
              </property>
@@ -1452,6 +1893,9 @@
            </item>
            <item row="2" column="1">
             <widget class="QLineEdit" name="lineEditDepartTel">
+             <property name="toolTip">
+              <string>部组分机号码</string>
+             </property>
              <property name="placeholderText">
               <string>部组分机号：</string>
              </property>
@@ -1459,6 +1903,9 @@
            </item>
            <item row="0" column="2">
             <widget class="QLineEdit" name="lineEditDepartMaster">
+             <property name="toolTip">
+              <string>主管法师名称</string>
+             </property>
              <property name="placeholderText">
               <string>主管法师：</string>
              </property>
@@ -1466,6 +1913,9 @@
            </item>
            <item row="0" column="0">
             <widget class="QLineEdit" name="lineEditDepartName">
+             <property name="toolTip">
+              <string>部组名称</string>
+             </property>
              <property name="placeholderText">
               <string> 部组名称：</string>
              </property>
@@ -1473,6 +1923,9 @@
            </item>
            <item row="2" column="0">
             <widget class="QLineEdit" name="lineEditDepartPhone">
+             <property name="toolTip">
+              <string>负责人手机号码</string>
+             </property>
              <property name="placeholderText">
               <string>负责人手机号：</string>
              </property>
@@ -1480,6 +1933,9 @@
            </item>
            <item row="0" column="3">
             <widget class="QLineEdit" name="lineEditDepartIncharge">
+             <property name="toolTip">
+              <string>负责人名称</string>
+             </property>
              <property name="placeholderText">
               <string>负责人：</string>
              </property>
@@ -1487,6 +1943,9 @@
            </item>
            <item row="2" column="3">
             <widget class="QComboBox" name="comboBoxDepartLevel">
+             <property name="toolTip">
+              <string>部组的级别</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; 选择部组级别</string>
@@ -1506,6 +1965,9 @@
            </item>
            <item row="3" column="0">
             <widget class="QComboBox" name="comboBoxDepartUpStairs">
+             <property name="toolTip">
+              <string>如果是第二级别部组，请选择上一级别部组是什么名称</string>
+             </property>
              <item>
               <property name="text">
                <string>&gt; 选择上一级别的部组</string>
@@ -1533,264 +1995,7 @@
             <enum>Qt::CustomContextMenu</enum>
            </property>
           </widget>
-          <widget class="QTreeView" name="treeView"/>
          </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tabLesson">
-       <attribute name="title">
-        <string>功课管理</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_5">
-        <item>
-         <widget class="QGroupBox" name="groupBox_3">
-          <property name="title">
-           <string>功课编辑：</string>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_5">
-           <item>
-            <widget class="QLineEdit" name="lineEditLessonName">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>按ENTER可以进入查询，如果存在同名的人，则在查询义工栏输出。</string>
-             </property>
-             <property name="placeholderText">
-              <string comment="name"> 功课名称：</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="comboBoxLesson">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <item>
-              <property name="text">
-               <string>&gt; 选择功课类型</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>基础功课</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>其他功课</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>分值：</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="spinBoxLesson"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButtonLessonSave">
-             <property name="text">
-              <string>保存</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTableView" name="tableViewLesson"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tabCheck">
-       <attribute name="title">
-        <string>考勤签到</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_7">
-        <item>
-         <widget class="QGroupBox" name="QGroupBoxCheck">
-          <property name="title">
-           <string>考勤编辑：</string>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_11">
-           <item>
-            <widget class="QDateEdit" name="dateEdit_3">
-             <property name="displayFormat">
-              <string>yyyy-MM-dd</string>
-             </property>
-             <property name="calendarPopup">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="comboBox_4">
-             <item>
-              <property name="text">
-               <string>部组选择</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_4">
-             <property name="text">
-              <string>查询</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_5">
-             <property name="text">
-              <string>保存</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTableView" name="tableView_4"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tabEvaluate">
-       <attribute name="title">
-        <string>自动评估</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
-        <item>
-         <widget class="QGroupBox" name="groupBox_4">
-          <property name="title">
-           <string>评估排名计算：</string>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_8">
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_9">
-             <item>
-              <widget class="QLabel" name="label_3">
-               <property name="text">
-                <string>开始日期：</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QDateEdit" name="dateEdit">
-               <property name="displayFormat">
-                <string>yyyy-MM-dd</string>
-               </property>
-               <property name="calendarPopup">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_10">
-               <item>
-                <widget class="QLabel" name="label_4">
-                 <property name="text">
-                  <string>结束日期：</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QDateEdit" name="dateEdit_2">
-                 <property name="displayFormat">
-                  <string>yyyy-MM-dd</string>
-                 </property>
-                 <property name="calendarPopup">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton">
-             <property name="text">
-              <string>排名计算</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_3">
-             <property name="text">
-              <string>导出排名</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTableView" name="tableView_3"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tabRecord">
-       <attribute name="title">
-        <string>评价记录</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_11">
-        <item>
-         <widget class="QTableView" name="tableViewRecord"/>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tabTransfer">
-       <attribute name="title">
-        <string>调动历史</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_10">
-        <item>
-         <widget class="QTableView" name="tableViewTransfer"/>
         </item>
        </layout>
       </widget>
@@ -1801,8 +2006,8 @@
        <widget class="QGroupBox" name="groupBox">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>30</y>
+          <x>250</x>
+          <y>50</y>
           <width>212</width>
           <height>184</height>
          </rect>
@@ -1861,10 +2066,10 @@
        <widget class="QGroupBox" name="groupBox_6">
         <property name="geometry">
          <rect>
-          <x>280</x>
-          <y>40</y>
-          <width>164</width>
-          <height>151</height>
+          <x>250</x>
+          <y>260</y>
+          <width>211</width>
+          <height>101</height>
          </rect>
         </property>
         <property name="title">
@@ -1872,23 +2077,9 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string> 本软件文件暂存路径：</string>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QLineEdit" name="lineEditConfGPath">
            <property name="placeholderText">
             <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string> 网络地址：</string>
            </property>
           </widget>
          </item>
@@ -1915,7 +2106,6 @@
    </attribute>
    <addaction name="actionConnect"/>
    <addaction name="actionSave"/>
-   <addaction name="actionSearch"/>
    <addaction name="actionClearEditWindow"/>
   </widget>
   <widget class="QStatusBar" name="statusBar">
@@ -1930,15 +2120,6 @@
    </property>
    <property name="text">
     <string>保存</string>
-   </property>
-  </action>
-  <action name="actionSearch">
-   <property name="icon">
-    <iconset resource="files.qrc">
-     <normaloff>:/files/search.png</normaloff>:/files/search.png</iconset>
-   </property>
-   <property name="text">
-    <string>查询</string>
    </property>
   </action>
   <action name="actionConnect">
@@ -1997,10 +2178,25 @@
   <action name="actionClearEditWindow">
    <property name="icon">
     <iconset resource="files.qrc">
-     <normaloff>:/files/broom.png</normaloff>:/files/broom.png</iconset>
+     <normaloff>:/files/clean.png</normaloff>:/files/clean.png</iconset>
    </property>
    <property name="text">
     <string>清除编辑窗</string>
+   </property>
+  </action>
+  <action name="actionFamilyInfo">
+   <property name="text">
+    <string> # 家庭信息查询或编辑</string>
+   </property>
+  </action>
+  <action name="actionEduJob">
+   <property name="text">
+    <string>  @学习工作</string>
+   </property>
+  </action>
+  <action name="actionDeleteRow">
+   <property name="text">
+    <string>  删除行</string>
    </property>
   </action>
  </widget>
@@ -2036,12 +2232,42 @@
   <tabstop>comboBoxVolunteerType</tabstop>
   <tabstop>comboBoxStat</tabstop>
   <tabstop>lineEditHobby</tabstop>
-  <tabstop>plainTextEditPast</tabstop>
-  <tabstop>plainTextEditWhyHere</tabstop>
-  <tabstop>plainTextEditHopeFor</tabstop>
+  <tabstop>toolButtonImage</tabstop>
+  <tabstop>lineEditFaVolunteerPID</tabstop>
+  <tabstop>lineEditFaName</tabstop>
+  <tabstop>lineEditFaBirthday</tabstop>
+  <tabstop>lineEditFaRelation</tabstop>
+  <tabstop>lineEditFaAddress</tabstop>
+  <tabstop>lineEditFaPhone</tabstop>
+  <tabstop>comboBoxFaHealth</tabstop>
+  <tabstop>pushButtonFaSave</tabstop>
+  <tabstop>tableViewFamily</tabstop>
+  <tabstop>lineEditEPID</tabstop>
+  <tabstop>lineEditEStart</tabstop>
+  <tabstop>lineEditEEnd</tabstop>
+  <tabstop>lineEditEPlace</tabstop>
+  <tabstop>lineEditENotes</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>lineEditDepartPID</tabstop>
+  <tabstop>comboBoxTransferDepartOne</tabstop>
+  <tabstop>comboBoxTransferDepartTwo</tabstop>
+  <tabstop>dateEditTransfer</tabstop>
+  <tabstop>pushButtonTransferSave</tabstop>
+  <tabstop>tableViewTransfer</tabstop>
   <tabstop>lineEditVName</tabstop>
+  <tabstop>lineEditQPhone</tabstop>
   <tabstop>lineEditVFieldSearch</tabstop>
   <tabstop>lineEditVHobbyKey</tabstop>
+  <tabstop>lineEditQHome</tabstop>
+  <tabstop>comboBoxQGender</tabstop>
+  <tabstop>comboBoxQAge</tabstop>
+  <tabstop>comboBoxQDepart</tabstop>
+  <tabstop>comboBoxQSecondDepart</tabstop>
+  <tabstop>comboBoxQIfGroup</tabstop>
+  <tabstop>comboBoxQFZZJ</tabstop>
+  <tabstop>comboBoxQVolunteerType</tabstop>
+  <tabstop>pushButtonVSearch</tabstop>
+  <tabstop>tableView</tabstop>
   <tabstop>lineEditDepartName</tabstop>
   <tabstop>lineEditDepartStartupDate</tabstop>
   <tabstop>lineEditDepartMaster</tabstop>
@@ -2052,34 +2278,17 @@
   <tabstop>comboBoxDepartLevel</tabstop>
   <tabstop>comboBoxDepartUpStairs</tabstop>
   <tabstop>pushButtonDepartSave</tabstop>
-  <tabstop>lineEditLessonName</tabstop>
-  <tabstop>comboBoxLesson</tabstop>
-  <tabstop>spinBoxLesson</tabstop>
-  <tabstop>pushButtonLessonSave</tabstop>
-  <tabstop>dateEdit_3</tabstop>
-  <tabstop>comboBox_4</tabstop>
-  <tabstop>pushButton_4</tabstop>
-  <tabstop>pushButton_5</tabstop>
-  <tabstop>dateEdit</tabstop>
-  <tabstop>dateEdit_2</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>pushButton_3</tabstop>
+  <tabstop>tableViewDepart</tabstop>
   <tabstop>lineEditDbHost</tabstop>
   <tabstop>lineEditDbUsername</tabstop>
   <tabstop>lineEditDbPassword</tabstop>
   <tabstop>pushButtonDbInit</tabstop>
   <tabstop>lineEditConfGPath</tabstop>
   <tabstop>lineEditConfGHostName</tabstop>
-  <tabstop>tableView_4</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>tableView_3</tabstop>
-  <tabstop>tableView</tabstop>
-  <tabstop>toolButtonImage</tabstop>
-  <tabstop>tableViewLesson</tabstop>
-  <tabstop>tableViewRecord</tabstop>
-  <tabstop>tableViewTransfer</tabstop>
-  <tabstop>tableViewDepart</tabstop>
-  <tabstop>treeView</tabstop>
+  <tabstop>tableViewEduJob</tabstop>
+  <tabstop>plainTextEditPast</tabstop>
+  <tabstop>plainTextEditHopeFor</tabstop>
+  <tabstop>plainTextEditWhyHere</tabstop>
  </tabstops>
  <resources>
   <include location="files.qrc"/>

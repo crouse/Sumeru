@@ -1,7 +1,9 @@
-CREATE DATABASE IF NOT EXISTS `vol`;
 
-USE `vol`;
+CREATE DATABASE `vol` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
+use vol;
+
+/* 部门表 */
 CREATE TABLE `depart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL COMMENT '部组名',
@@ -16,16 +18,76 @@ CREATE TABLE `depart` (
   `stat` varchar(10) DEFAULT NULL COMMENT '部组状态',
   `notes` varchar(512) DEFAULT NULL COMMENT '其他记录',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+
+/* 学习/工作表 */
+CREATE TABLE `edujob` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` varchar(45) NOT NULL COMMENT '义工身份证号码',
+  `start` varchar(45) DEFAULT NULL COMMENT '开始年份',
+  `end` varchar(45) DEFAULT NULL COMMENT '结束年份',
+  `place` varchar(45) NOT NULL COMMENT '学校或单位名称',
+  `notes` varchar(512) DEFAULT NULL COMMENT '其他记录',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/* 家庭信息表 */
+CREATE TABLE `family` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `vpid` varchar(45) NOT NULL COMMENT '义工身份证号码',
+  `name` varchar(45) NOT NULL COMMENT '义工家庭成员姓名',
+  `birthday` varchar(45) DEFAULT NULL COMMENT '生日',
+  `relation` varchar(45) NOT NULL COMMENT '关系',
+  `address` varchar(128) DEFAULT NULL COMMENT '住址',
+  `phone` varchar(45) DEFAULT NULL COMMENT '手机号码',
+  `health` varchar(45) DEFAULT NULL COMMENT '健康状况',
+  `faith` varchar(45) DEFAULT NULL COMMENT '信仰情况',
+  `notes` varchar(512) DEFAULT NULL COMMENT '其他记录',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/* 图像存放表 */
 CREATE TABLE `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` varchar(45) NOT NULL COMMENT '身份证号',
   `image` mediumblob COMMENT '图像的二进制文件存放',
   `uptime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '插入图片时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=157 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+/* 操作记录表 */
+CREATE TABLE `ophistory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL COMMENT '行为',
+  `json` varchar(45) NOT NULL COMMENT '操作记录',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/* 用户管理表 */
+CREATE TABLE `sumeru_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL COMMENT '用户名称',
+  `password` varchar(45) NOT NULL COMMENT '用户密码哈希值',
+  `mac` varchar(45) NOT NULL COMMENT '用户硬件网卡地址',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/* 调动信息表 */
+CREATE TABLE `transfer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` varchar(45) NOT NULL COMMENT '义工身份证号码',
+  `start` datetime DEFAULT NULL COMMENT '开始日期',
+  `depart` varchar(45) NOT NULL COMMENT '一级部组',
+  `departsecond` varchar(45) NOT NULL COMMENT '二级部组',
+  `notes` varchar(512) DEFAULT NULL COMMENT '其他记录',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/* 义工档案表 */
 CREATE TABLE `volunteer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL COMMENT '姓名',
@@ -64,18 +126,6 @@ CREATE TABLE `volunteer` (
   `notes` varchar(512) DEFAULT NULL COMMENT '其他记录',
   PRIMARY KEY (`id`),
   UNIQUE KEY `pid_UNIQUE` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=348 DEFAULT CHARSET=utf8;
-
-CREATE TABLE `sumeru_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(45) NOT NULL COMMENT '用户名称',
-  `password` varchar(45) NOT NULL COMMENT '用户密码哈希值',
-  `mac` varchar(45) NOT NULL COMMENT '用户硬件网卡地址',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
-
-
-
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 

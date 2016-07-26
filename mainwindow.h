@@ -26,9 +26,9 @@
 #include <QComboBox>
 #include <QCryptographicHash>
 
-#define DB_HOSTNAME "192.168.1.2"
+#define DB_HOSTNAME "192.168.128.10"
 #define DB_USERNAME "volunteer"
-#define DB_PASSWORD "abc"
+#define DB_PASSWORD "b7e6bf7f5cf47c8f383131e709f50b70"
 #define DB_NAME "vol"
 
 namespace Ui {
@@ -79,6 +79,9 @@ public:
 
     QSqlTableModel *queryModel;
     QSqlTableModel *departModel;
+    QSqlTableModel *familyModel;
+    QSqlTableModel *eduJobModel;
+    QSqlTableModel *transferModel;
 
 private slots:
     void on_pushButtonDbInit_clicked();
@@ -86,8 +89,6 @@ private slots:
     void on_actionConnect_triggered();
 
     void on_actionSave_triggered();
-
-    void on_actionSearch_triggered();
 
     void on_toolButtonImage_clicked();
 
@@ -119,9 +120,32 @@ private slots:
 
     void on_comboBoxQDepart_currentIndexChanged(const QString &arg1);
 
+    void on_actionFamilyInfo_triggered();
+
+    void on_pushButtonFaSave_clicked();
+
+    void on_pushButtonTransferSave_clicked();
+
+    void on_comboBoxTransferDepartOne_currentIndexChanged(const QString &arg1);
+
+    void on_pushButton_clicked();
+
+    void on_actionTransferHistory_triggered();
+
+    void on_actionEduJob_triggered();
+
+    void on_tableViewFamily_customContextMenuRequested(const QPoint &pos);
+
+    void on_tableViewEduJob_customContextMenuRequested(const QPoint &pos);
+
+    void on_tableViewTransfer_customContextMenuRequested(const QPoint &pos);
+
+    void on_actionDeleteRow_triggered();
+
 private:
     Ui::MainWindow *ui;
     int gRowNum;
+    int deleteRow;
     QString gImageAbsPath;
 
     int gUserLevel;

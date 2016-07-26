@@ -32,7 +32,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->lineEditConfGHostName->setReadOnly(true);
     ui->centralWidget->setHidden(true);
 
+    ui->dateEditTransfer->setDate(QDate::currentDate());
     gRowNum = -1;
+    deleteRow = -1;
     gUserLevel = 1;
     gId = 0;
 }
@@ -71,7 +73,7 @@ void MainWindow::initToolBarLineEdits()
         ui->mainToolBar->addSeparator();
 
         ui->mainToolBar->addWidget(lineEditPassWord);
-        ui->mainToolBar->addSeparator();
+        //ui->mainToolBar->addSeparator();
     }
 
     /*
@@ -163,12 +165,16 @@ bool MainWindow::connDatabase(QString hostname, QString username, QString passwo
 
     setTable("volunteer", queryModel, ui->tableView, QSqlTableModel::OnFieldChange);
     setTable("depart", departModel, ui->tableViewDepart, QSqlTableModel::OnFieldChange);
+    setTable("family", familyModel, ui->tableViewFamily, QSqlTableModel::OnFieldChange);
+    setTable("edujob", eduJobModel, ui->tableViewEduJob, QSqlTableModel::OnFieldChange);
+    setTable("transfer", transferModel, ui->tableViewTransfer, QSqlTableModel::OnFieldChange);
 
 
     // test mac address
     if (!verify()) {
         QMessageBox::information(this, "", "重新打开后，请输入用户名和密码。");
         qApp->closeAllWindows();
+        return false;
     }
 
     return true;
@@ -544,19 +550,6 @@ void MainWindow::on_actionSave_triggered()
     clearAddEdits();
 }
 
-void MainWindow::on_actionSearch_triggered()
-{
-    int tabIndex = ui->tabWidget->currentIndex();
-    qDebug() << "tab: " << tabIndex << ui->tabWidget->tabText(tabIndex);
-    switch(tabIndex) {
-    case 1:
-        break;
-    default:
-        break;
-    }
-    qDebug() << "func=on_actionSearch_triggered,tabIndex=" << tabIndex;
-}
-
 void MainWindow::on_toolButtonImage_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
@@ -608,6 +601,9 @@ void MainWindow::on_tabWidget_currentChanged(int index)
         ui->tableViewDepart->reset();
 
         addComboBoxValues(ui->comboBoxQDepart, " level = 1");
+        break;
+    case 3:
+        addComboBoxValues(ui->comboBoxTransferDepartOne, " level = 1");
         break;
     default:
         break;
@@ -736,6 +732,8 @@ void MainWindow::on_tableView_customContextMenuRequested(const QPoint &pos)
     popMenu->addAction(ui->actionRecordHistory);
     popMenu->addAction(ui->actionTransferHistory);
     popMenu->addAction(ui->actionShowPersonImage);
+    popMenu->addAction(ui->actionFamilyInfo);
+    popMenu->addAction(ui->actionEduJob);
     popMenu->exec(QCursor::pos());
 
     delete popMenu;
@@ -1035,7 +1033,6 @@ void MainWindow::on_actionShowPersonImage_triggered()
 
 bool MainWindow::verify()
 {
-    QString upassword;
     QSqlQuery query;
     QStringList macAddresses;
     QList<QNetworkInterface> list = QNetworkInterface::allInterfaces();
@@ -1083,4 +1080,208 @@ void MainWindow::on_actionClearEditWindow_triggered()
 void MainWindow::on_comboBoxQDepart_currentIndexChanged(const QString &arg1)
 {
     addComboBoxValues(ui->comboBoxQSecondDepart, QString(" level = 2 and topper = '%1'").arg(arg1));
+}
+
+void MainWindow::on_actionFamilyInfo_triggered()
+{
+    QString vpid = queryModel->index(gRowNum, 17).data().toString();
+    ui->tabWidget->setCurrentIndex(1);
+    ui->lineEditFaVolunteerPID->setText(vpid);
+    familyModel->setFilter(QString(" vpid = '%1'").arg(vpid));
+    familyModel->select();
+    ui->tableViewFamily->reset();
+}
+
+void MainWindow::on_pushButtonFaSave_clicked()
+{
+    QString pid = ui->lineEditFaVolunteerPID->text().trimmed();
+    QString name = ui->lineEditFaName->text().trimmed();
+    QString birthday = ui->lineEditFaBirthday->text().trimmed();
+    QString relation = ui->lineEditFaRelation->text().trimmed();
+    QString address = ui->lineEditFaAddress->text().trimmed();
+    QString phone = ui->lineEditFaPhone->text().trimmed();
+    QString health = ui->comboBoxFaHealth->currentText().trimmed();
+
+    if (pid.isEmpty() || name.isEmpty()) return;
+    QSqlQuery query;
+
+    query.prepare("insert into family(vpid, name, birthday, relation, address, phone, health) values ("
+                  ":pid, :name, :birthday, :relation, :address, :phone, :health)");
+    query.bindValue(":pid", pid);
+    query.bindValue(":name", name);
+    query.bindValue(":birthday", birthday);
+    query.bindValue(":relation", relation);
+    query.bindValue(":address", address);
+    query.bindValue(":phone", phone);
+    query.bindValue(":health", health);
+
+    query.exec();
+
+    familyModel->setFilter(QString(" vpid = '%1'").arg(pid));
+    familyModel->select();
+    ui->tableViewFamily->reset();
+}
+
+void MainWindow::on_pushButtonTransferSave_clicked()
+{
+    QString pid = ui->lineEditDepartPID->text().trimmed();
+    if (pid.isEmpty()) return;
+    QString depart = ui->comboBoxTransferDepartOne->currentText().trimmed();
+    QString departSecond = ui->comboBoxTransferDepartTwo->currentText().trimmed();
+    QString start = ui->dateEditTransfer->date().toString("yyyy-MM-dd");
+    qDebug() << pid << depart << departSecond << start;
+
+    ui->lineEditDepartPID->clear();
+
+    QSqlQuery query;
+    query.prepare("insert into transfer(pid, start, depart, departsecond) values (:pid, :start, :depart, :departsecond)");
+    query.bindValue(":pid", pid);
+    query.bindValue(":depart", depart);
+    query.bindValue(":departsecond", departSecond);
+    query.bindValue(":start", start);
+    query.exec();
+
+    transferModel->setFilter(QString("pid = '%1'").arg(pid));
+    transferModel->select();
+    ui->tableViewTransfer->reset();
+}
+
+void MainWindow::on_comboBoxTransferDepartOne_currentIndexChanged(const QString &arg1)
+{
+    QString departOne = arg1;
+    addComboBoxValues(ui->comboBoxTransferDepartTwo, QString(" level = 2 and topper = '%1'").arg(departOne));
+    qDebug() << departOne;
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString pid = ui->lineEditEPID->text().trimmed();
+    QString start = ui->lineEditEStart->text().trimmed();
+    QString end = ui->lineEditEEnd->text().trimmed();
+    QString place = ui->lineEditEPlace->text().trimmed();
+    QString notes = ui->lineEditENotes->text().trimmed();
+
+    if (pid.isEmpty() || place.isEmpty()) return;
+
+    QSqlQuery query;
+    query.prepare("insert into edujob( pid, start, end, place, notes) values (:pid, :start, :end, :place, :notes)");
+    query.bindValue(":pid", pid);
+    query.bindValue(":start", start);
+    query.bindValue(":end", end);
+    query.bindValue(":place", place);
+    query.bindValue(":notes", notes);
+    query.exec();
+
+    eduJobModel->setFilter(QString("pid = '%1'").arg(pid));
+    eduJobModel->select();
+    ui->tableViewEduJob->reset();
+}
+
+void MainWindow::on_actionTransferHistory_triggered()
+{
+    QString pid = queryModel->index(gRowNum, 17).data().toString();
+    ui->tabWidget->setCurrentIndex(3);
+    ui->lineEditDepartPID->setText(pid);
+    transferModel->setFilter(QString(" pid = '%1'").arg(pid));
+    transferModel->select();
+    ui->tableViewTransfer->reset();
+}
+
+void MainWindow::on_actionEduJob_triggered()
+{
+    QString pid = queryModel->index(gRowNum, 17).data().toString();
+    ui->tabWidget->setCurrentIndex(2);
+    ui->lineEditEPID->setText(pid);
+    eduJobModel->setFilter(QString(" pid = '%1'").arg(pid));
+    eduJobModel->select();
+    ui->tableViewEduJob->reset();
+}
+
+void MainWindow::on_tableViewFamily_customContextMenuRequested(const QPoint &pos)
+{
+    // 删除功能
+    int rowNum = ui->tableViewFamily->verticalHeader()->logicalIndexAt(pos);
+    int colNum = ui->tableViewFamily->horizontalHeader()->logicalIndexAt(pos);
+
+    deleteRow = rowNum;
+    if (rowNum < 0) return;
+    qDebug() << rowNum << colNum;
+    QMenu *popMenu = new QMenu(this);
+    popMenu->addAction(ui->actionDeleteRow);
+    popMenu->exec(QCursor::pos());
+
+    delete popMenu;
+}
+
+void MainWindow::on_tableViewEduJob_customContextMenuRequested(const QPoint &pos)
+{
+    // 删除功能
+    int rowNum = ui->tableViewEduJob->verticalHeader()->logicalIndexAt(pos);
+    int colNum = ui->tableViewEduJob->horizontalHeader()->logicalIndexAt(pos);
+
+    deleteRow = rowNum;
+    if (rowNum < 0) return;
+
+    qDebug() << rowNum << colNum;
+    QMenu *popMenu = new QMenu(this);
+    popMenu->addAction(ui->actionDeleteRow);
+    popMenu->exec(QCursor::pos());
+
+    delete popMenu;
+
+}
+
+void MainWindow::on_tableViewTransfer_customContextMenuRequested(const QPoint &pos)
+{
+    // 删除功能
+    int rowNum = ui->tableViewTransfer->verticalHeader()->logicalIndexAt(pos);
+    int colNum = ui->tableViewTransfer->horizontalHeader()->logicalIndexAt(pos);
+
+    deleteRow = rowNum;
+    if (rowNum < 0) return;
+    qDebug() << rowNum << colNum;
+    QMenu *popMenu = new QMenu(this);
+    popMenu->addAction(ui->actionDeleteRow);
+    popMenu->exec(QCursor::pos());
+    delete popMenu;
+}
+
+void MainWindow::on_actionDeleteRow_triggered()
+{
+    int index = ui->tabWidget->currentIndex();
+    qDebug() << "Current Tab Widget" << index;
+
+    QSqlTableModel *model;
+    switch(index) {
+    // family
+    case 1:
+        model = *&familyModel;
+        break;
+    // edujob
+    case 2:
+        model = *&eduJobModel;
+        break;
+    // transfer
+    case 3:
+        model = *&transferModel;
+        break;
+    default:
+        break;
+    }
+
+    QMessageBox msgBox;
+    msgBox.setText("你确定删除当前行么？如果不想删除请按 Cancel 按钮.");
+    msgBox.setStandardButtons(QMessageBox::Yes| QMessageBox::No);
+    msgBox.setDefaultButton(QMessageBox::Cancel);
+
+    int stat = msgBox.exec();
+    if (stat == QMessageBox::No) {
+        deleteRow = -1;
+        return;
+    } else {
+        qDebug() << deleteRow;
+        model->removeRow(deleteRow);
+        model->submitAll();
+        deleteRow = -1;
+    }
 }
