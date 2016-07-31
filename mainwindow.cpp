@@ -596,7 +596,7 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 {
 
     switch (index) {
-    case 1:
+    case 5:
         departModel->select();
         ui->tableViewDepart->reset();
 
@@ -924,6 +924,8 @@ void MainWindow::addComboBoxValues(QComboBox *&combox, QString filter)
 {
     int i = 1;
     QSqlQuery query;
+    combox->clear();
+    combox->insertItem(0, "> 请选择部组名称");
     query.exec(QString("select name from depart where %1").arg(filter));
     while(query.next()) {
         QString name = query.value(0).toString();
