@@ -27,7 +27,7 @@
        <enum>Qt::CustomContextMenu</enum>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="tabAdd">
        <attribute name="title">
@@ -1173,6 +1173,11 @@
                <item>
                 <property name="text">
                  <string>在住</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>在住农家院</string>
                 </property>
                </item>
                <item>

@@ -26,9 +26,9 @@
 #include <QComboBox>
 #include <QCryptographicHash>
 
-#define DB_HOSTNAME "192.168.128.10"
+#define DB_HOSTNAME "127.0.0.1"
 #define DB_USERNAME "volunteer"
-#define DB_PASSWORD "b7e6bf7f5cf47c8f383131e709f50b70"
+#define DB_PASSWORD "amituofo"
 #define DB_NAME "vol"
 
 namespace Ui {
@@ -44,6 +44,7 @@ public:
     ~MainWindow();
     QLineEdit *lineEditUserName;
     QLineEdit *lineEditPassWord;
+    QLineEdit *lineEditHostIp;
     // QLineEdit *lineEditSearch;
 
     void initToolBarLineEdits();

@@ -61,19 +61,24 @@ void MainWindow::initToolBarLineEdits()
     {
         lineEditUserName = new QLineEdit;
         lineEditPassWord = new QLineEdit;
+        lineEditHostIp = new QLineEdit;
 
         lineEditUserName->setFixedSize(100, 20);
         lineEditPassWord->setFixedSize(100, 20);
+        lineEditHostIp->setFixedSize(100, 20);
+        lineEditHostIp->setText("127.0.0.1");
 
         lineEditUserName->setPlaceholderText(" 用户名：");
         lineEditPassWord->setPlaceholderText(" 密码：");
+        lineEditHostIp->setPlaceholderText(" 服务器IP: ");
         lineEditPassWord->setEchoMode(QLineEdit::PasswordEchoOnEdit);
 
         ui->mainToolBar->addWidget(lineEditUserName);
         ui->mainToolBar->addSeparator();
 
         ui->mainToolBar->addWidget(lineEditPassWord);
-        //ui->mainToolBar->addSeparator();
+        ui->mainToolBar->addSeparator();
+        ui->mainToolBar->addWidget(lineEditHostIp);
     }
 
     /*
@@ -276,7 +281,7 @@ void MainWindow::clearAddEdits()
 void MainWindow::on_pushButtonDbInit_clicked()
 {
     int ret;
-    QString hostname = ui->lineEditDbHost->text().trimmed();
+    QString hostname = lineEditHostIp->text().trimmed();
     QString username = ui->lineEditDbUsername->text().trimmed();
     QString password = ui->lineEditDbPassword->text().trimmed();
 
@@ -596,11 +601,13 @@ void MainWindow::on_tabWidget_currentChanged(int index)
 {
 
     switch (index) {
+    case 4:
+        addComboBoxValues(ui->comboBoxQDepart, " level = 1");
+        break;
     case 5:
         departModel->select();
         ui->tableViewDepart->reset();
 
-        addComboBoxValues(ui->comboBoxQDepart, " level = 1");
         break;
     case 3:
         addComboBoxValues(ui->comboBoxTransferDepartOne, " level = 1");
